@@ -1,6 +1,4 @@
-
-
-const bollywoodData={
+export const bollywoodData={
     data:[
         {
             wikiUrl:"https://en.wikipedia.org/wiki/Shah_Rukh_Khan",
