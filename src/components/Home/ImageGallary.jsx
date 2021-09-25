@@ -2,10 +2,22 @@ import { ImageGallaryItem } from "./ImageGallaryItem";
 import {bollywoodData} from "../../state/reducer/bollywoodData";
 
 export const ImageGallary = () => {
-  console.log(bollywoodData.data)
+  console.log(bollywoodData)
   return (
     <table>
       <tr>
+        {
+          bollywoodData.data.map((item) =>{
+            <td>
+              <ImageGallaryItem
+              wikiUrl={item.wikiUrl}
+              imgUrl={item.imgUrl}
+              title={item.title}
+              />
+              </td>
+          }
+          )
+        }
         <td>
           <ImageGallaryItem wikiUrl="https://en.wikipedia.org/wiki/Shah_Rukh_Khan" imgUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/330px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg" title="Shahrukh Khan" />
         </td>
